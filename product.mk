@@ -3,6 +3,10 @@ PRODUCT_PACKAGES += auditd
 
 $(call prepend-product-if-exists, vendor/invisiblek/product.mk)
 
+ifneq ($(filter lineage_marlin,$(TARGET_PRODUCT)),)
+BOARD_PREBUILT_VENDORIMAGE := vendor/firmware/marlin/radio/vendor.img
+endif
+
 ifneq ($(filter lineage_marlin lineage_mata lineage_nash lineage_sailfish,$(TARGET_PRODUCT)),)
 # TARGET_ARCH doesn't get set in time, so let's make sure its done before we inherit gapps
 TARGET_ARCH := arm64
