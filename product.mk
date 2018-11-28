@@ -8,7 +8,10 @@ GAPPS_VARIANT := nano
 $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 
 PRODUCT_COPY_FILES += \
-  vendor/opengapps/sources/arm/lib/23/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+  vendor/opengapps/sources/arm/lib/28/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+  vendor/opengapps/sources/arm/lib/28/libsketchology_native.so:system/lib/libsketchology_native.so \
+  vendor/opengapps/sources/arm64/lib64/28/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+  vendor/opengapps/sources/arm64/lib64/28/libsketchology_native.so:system/lib64/libsketchology_native.so
 endif
 
 TARGET_EXTRA_KERNEL_MODULES := wireguard
