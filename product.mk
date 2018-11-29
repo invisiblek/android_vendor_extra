@@ -13,8 +13,6 @@ PRODUCT_COPY_FILES += \
   vendor/opengapps/sources/arm64/lib64/28/libsketchology_native.so:system/lib64/libsketchology_native.so
 endif
 
-TARGET_EXTRA_KERNEL_MODULES := wireguard
-
 $(shell sh vendor/extra/get-blacklist-hosts-file.sh)
 
 PRODUCT_COPY_FILES += \
