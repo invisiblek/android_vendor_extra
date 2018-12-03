@@ -1,6 +1,6 @@
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
-$(call prepend-product-if-exists, vendor/invisiblek/product.mk)
+$(call inherit-product-if-exists, vendor/invisiblek/product.mk)
 
 ifneq ($(filter lineage_marlin lineage_mata lineage_nash lineage_sailfish,$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := nano
