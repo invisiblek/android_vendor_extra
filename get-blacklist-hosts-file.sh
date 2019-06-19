@@ -9,6 +9,8 @@ whitelists=( \
   activity.windows.com \
   attestation.xboxlive.com \
   cert.mgt.xboxlive.com \
+  client-s.gateway.messenger.live.com \
+  clientconfig.passport.net  \
   continuum.dds.microsoft.com \
   ctldl.windowsupdate.com \
   def-vef.xboxlive.com \
@@ -18,11 +20,15 @@ whitelists=( \
   licensing.xboxlive.com \
   mobile.pipe.aria.microsoft.com \
   notify.xboxlive.com \
+  s.youtube.com \
   settings-win.data.microsoft.com \
   title.auth.xboxlive.com \
   title.mgt.xboxlive.com \
+  v10.events.data.microsoft.com \
   v10.vortex-win.data.microsoft.com \
+  v20.events.data.microsoft.com \
   v20.vortex-win.data.microsoft.com \
+  video-stats.l.google.com \
   www.googleadservices.com \
   www.msftncsi.com \
   www.xboxlive.com \
