@@ -18,3 +18,5 @@ $(shell sh vendor/extra/get-blacklist-hosts-file.sh)
 PRODUCT_COPY_FILES += \
     vendor/extra/rootdir/etc/hosts:system/etc/hosts \
     vendor/extra/rootdir/etc/init/ttl.rc:system/etc/init/ttl.rc
+
+PRODUCT_PACKAGES += OpenWeatherMapProvider
