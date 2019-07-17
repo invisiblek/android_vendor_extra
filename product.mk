@@ -2,7 +2,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 $(call inherit-product-if-exists, vendor/invisiblek/product.mk)
 
-ifneq ($(filter lineage_marlin lineage_mata lineage_nash lineage_sailfish,$(TARGET_PRODUCT)),)
+ifneq ($(filter lineage_evert lineage_marlin lineage_mata lineage_nash lineage_sailfish,$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := nano
 $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 
