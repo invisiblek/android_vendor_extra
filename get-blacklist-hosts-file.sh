@@ -1,9 +1,10 @@
 #!/bin/bash
 
 mkdir -p vendor/extra/rootdir/etc/
-rm -f vendor/extra/rootdir/etc/hosts
 
-wget --quiet https://github.com/StevenBlack/hosts/raw/master/hosts -O vendor/extra/rootdir/etc/hosts
+# you must run the following commands manually at least one, preferrably before every build
+# rm -f vendor/extra/rootdir/etc/hosts
+# wget --quiet https://github.com/StevenBlack/hosts/raw/master/hosts -O vendor/extra/rootdir/etc/hosts
 
 whitelists=( \
   activity.windows.com \
