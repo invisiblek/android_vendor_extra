@@ -6,10 +6,12 @@ ifneq ($(filter lineage_marlin lineage_mata lineage_nash lineage_sailfish,$(TARG
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
 endif
 
-$(shell sh vendor/extra/get-blacklist-hosts-file.sh)
+#$(shell sh vendor/extra/get-blacklist-hosts-file.sh)
+
+#PRODUCT_COPY_FILES += \
+#    vendor/extra/rootdir/etc/hosts:system/etc/hosts
 
 PRODUCT_COPY_FILES += \
-    vendor/extra/rootdir/etc/hosts:system/etc/hosts \
     vendor/extra/rootdir/etc/init/ttl.rc:system/etc/init/ttl.rc
 
 PRODUCT_PACKAGES += OpenWeatherMapProvider
