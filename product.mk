@@ -14,4 +14,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/extra/rootdir/etc/init/ttl.rc:system/etc/init/ttl.rc
 
+-include vendor/gapps/common/common-vendor.mk
+
 PRODUCT_PACKAGES += OpenWeatherMapProvider
