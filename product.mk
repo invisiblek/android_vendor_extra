@@ -12,7 +12,7 @@ endif
 #    vendor/extra/rootdir/etc/hosts:system/etc/hosts
 
 PRODUCT_COPY_FILES += \
-    vendor/extra/rootdir/etc/init/ttl.rc:system/etc/init/ttl.rc
+    vendor/extra/prebuilt/common/etc/init/ttl.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/ttl.rc
 
 -include vendor/gapps/common/common-vendor.mk
 
