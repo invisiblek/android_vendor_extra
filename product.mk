@@ -17,3 +17,19 @@ PRODUCT_COPY_FILES += \
 -include vendor/gapps/common/common-vendor.mk
 
 PRODUCT_PACKAGES += OpenWeatherMapProvider
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/extra/prebuilt/common/etc/init.d/00banner:$(TARGET_COPY_OUT_SYSTEM)/etc/init.d/00banner \
+    vendor/extra/prebuilt/common/bin/sysinit:$(TARGET_COPY_OUT_SYSTEM)/bin/sysinit
+
+ifneq ($(TARGET_BUILD_VARIANT),user)
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/extra/prebuilt/common/etc/init.d/90userinit:$(TARGET_COPY_OUT_SYSTEM)/etc/init.d/90userinit
+endif
+
+$(foreach f,$(wildcard vendor/extra/prebuilt/common/etc/init/*.rc),\
+        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+
+$(eval include vendor/extra/sepolicy/common/sepolicy.mk)
