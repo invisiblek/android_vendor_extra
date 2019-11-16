@@ -2,8 +2,17 @@ on post-fs-data
     # Run sysinit
     start sysinit
 
+on property:sys.user.0.ce_available=true
+    # Run sysinit
+    start sysinit_decrypted
+
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
+    user root
+    oneshot
+    disabled
+
+service sysinit_decrypted /system/bin/sysinit decrypted
     user root
     oneshot
     disabled

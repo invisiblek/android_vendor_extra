@@ -1,9 +1,13 @@
 #!/system/bin/sh
 
 export PATH=/sbin:/system/sbin:/system/bin:/system/xbin
-for i in /system/etc/init.d/*; do
-    if [ -x $i ]; then
-        /system/bin/log -t sysinit Running $i
-        $i
-    fi
-done
+if [ -z $1 ]; then
+    for i in /system/etc/init.d/*; do
+        if [ -x $i ]; then
+            /system/bin/log -t sysinit Running $i
+            $i
+        fi
+    done
+else
+    /system/etc/init.d/90userinit $1
+fi

@@ -1,9 +1,8 @@
 #!/system/bin/sh
 # call userinit.sh if present in /data/local
 
-if [ -e /data/local/userinit.sh ];
-then
+if [ -e /data/local/userinit.sh ]; then
    log -p i -t userinit "Executing /data/local/userinit.sh";
-   /system/bin/sh /data/local/userinit.sh;
+   /system/bin/sh /data/local/userinit.sh $1;
    setprop lineage.userinit.active 1;
 fi;
